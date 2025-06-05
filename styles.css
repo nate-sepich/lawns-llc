@@ -82,6 +82,35 @@ body {
 .additional-services ul {
   padding-left: 1.2rem;
 }
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+.service-grid .property-management,
+.service-grid .additional-services {
+  flex: 1 1 280px;
+  margin: 0;
+}
+
+.property-management {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.property-management h2 {
+  color: #2e7d32;
+}
+.property-management p {
+  line-height: 1.4;
+}
 form {
   max-width: 600px;
   margin: 2rem auto;
