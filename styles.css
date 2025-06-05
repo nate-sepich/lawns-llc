@@ -5,6 +5,31 @@ body {
   background-color: #f4f8f4;
   color: #333;
 }
+
+.main-nav {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0.5rem;
+}
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: bold;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}
 .hero {
   position: relative;
   background: url('assets/landingpage/background.jpg') center/cover no-repeat;
