@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SAM template for deploying static website for L.A.W.N.S. LLC
+Parameters:
+  WebsiteBucketName:
+    Type: String
+    Default: www.lawns-llc-iowa.com
+Resources:
+  WebsiteBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName:
+        Ref: WebsiteBucketName
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+Outputs:
+  WebsiteURL:
+    Description: URL of the static site
+    Value:
+      Fn::GetAtt:
+      - WebsiteBucket
+      - WebsiteURL

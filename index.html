@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>L.A.W.N.S. LLC – Lawncare in Iowa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="assets/landingpage/transparent-logo.png" alt="LAWNS LLC Logo" />
+      <!-- <h1>L.A.W.N.S. LLC</h1> -->
+      <p>Serving Iowa with full-service lawncare & snow removal</p>
+      <a href="#contactForm" class="cta-btn">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <section class="acronym">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>L</strong>awncare</li>
+      <li><strong>A</strong>eration</li>
+      <li><strong>W</strong>eed Trimming</li>
+      <li><strong>N</strong>utrients</li>
+      <li><strong>S</strong>eeding & Snow Removal</li>
+    </ul>
+    <p>Call or text for a free estimate: <strong>786-643-8034</strong></p>
+  </section>
+
+  <section class="additional-services">
+    <h2>Additional Services</h2>
+    <ul>
+      <li>Hauling & Dumping</li>
+    </ul>
+  </section>
+
+  <section class="gallery-carousel">
+    <h2>Our Work</h2>
+    <div class="carousel">
+      <div><img src="assets/landingpage/sidewalk-cleanup.jpg" alt="Sidewalk cleanup before and after"></div>
+      <div><img src="assets/landingpage/wide-driveway-cleanup.jpg" alt="Wide driveway cleanup"></div>
+      <!-- <div><img src="assets/landingpage/dump-trailer.jpg" alt="Dump trailer hauling"></div> -->
+      <div><img src="assets/landingpage/background.jpg" alt="Lush green lawn"></div>
+    </div>
+  </section>
+
+  <form id="contactForm">
+    <h2>Request a Free Estimate</h2>
+    <label>
+      Full Name
+      <input type="text" name="name" placeholder="Full Name" required />
+    </label>
+    <label>
+      Email
+      <input type="email" name="email" placeholder="Email" required />
+    </label>
+    <label>
+      Phone Number
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+    </label>
+    <label>
+      Street Address
+      <input type="text" name="address" placeholder="Street Address" required />
+    </label>
+    <label>
+      Services Needed
+      <textarea name="services" placeholder="Services Needed (e.g., mowing, aeration, snow removal)" required></textarea>
+    </label>
+    <button type="submit">
+      <span class="btn-text">Submit Request</span>
+      <span class="spinner" hidden>⏳</span>
+    </button>
+    <p id="responseMsg"></p>
+  </form>
+
+  <footer>
+    &copy; 2025 L.A.W.N.S. LLC • All rights reserved
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").onsubmit = function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const responseEl = document.getElementById("responseMsg");
+
+      // Build a JS object from the form’s inputs
+      const formData = new FormData(form);
+      const dataObj = Object.fromEntries(formData.entries());
+
+      // Convert to URL-encoded string
+      const urlEncoded = new URLSearchParams(dataObj).toString();
+
+      // Send as a simple POST (no preflight)
+      fetch(
+        "https://script.google.com/macros/s/AKfycbxVN0vlexOZsf_Yw6j2gfYAovD-Qpjp_7kcpubqqlnQfsgCckwpxv5DIWTeFg2BqMKsDw/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: urlEncoded,
+          mode: "no-cors",
+        }
+      );
+
+      // Immediately notify the user and reset the form
+      responseEl.textContent = "Thanks! We'll be in touch shortly.";
+      form.reset();
+    };
+  </script>
+</body>
+</html>

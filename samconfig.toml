@@ -1,0 +1,10 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "lawns-llc"
+resolve_s3 = true
+s3_prefix = "lawns-llc"
+region = "us-east-1"
+profile = "dev-nsep"
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "WebsiteBucketName=\"www.lawns-llc-iowa.com\""
+image_repositories = []

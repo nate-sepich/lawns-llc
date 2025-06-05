@@ -1,0 +1,158 @@
+/* styles.css - extracted from index.html */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f8f4;
+  color: #333;
+}
+.hero {
+  position: relative;
+  background: url('assets/landingpage/background.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+.hero-content p {
+  font-size: 1.25rem;
+  margin: 0.5rem 0 1rem;
+  margin-bottom: 2rem;
+}
+.hero-content .cta-btn {
+  margin-top: 1rem;
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.hero-content .cta-btn:hover {
+  background-color: #1b5e20;
+}
+.hero-content img {
+  max-width: 45%;
+  height: auto;
+}
+.acronym {
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: left;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.acronym h2 {
+  color: #2e7d32;
+}
+.acronym ul {
+  padding-left: 1.2rem;
+}
+.additional-services {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.additional-services h2 {
+  color: #2e7d32;
+}
+.additional-services ul {
+  padding-left: 1.2rem;
+}
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+form button {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+#responseMsg {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+/* Carousel gallery styling */
+.gallery-carousel {
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+}
+.gallery-carousel h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}
+.carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+.carousel div {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+.carousel img {
+  display: block;
+  max-height: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
