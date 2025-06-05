@@ -8,12 +8,14 @@
 </head>
 <body>
   <nav class="main-nav">
-    <ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
+      <li><a href="area-served.html">Area Served</a></li>
+      <li><a href="property-management.html">Property Management</a></li>
       <li><a href="services/mowing.html">Mowing</a></li>
       <li><a href="services/aeration.html">Aeration</a></li>
       <li><a href="services/hauling-dumping.html">Hauling &amp; Dumping</a></li>
-      <li><a href="property-management.html">Property Management</a></li>
     </ul>
   </nav>
 
@@ -98,10 +100,17 @@
   </footer>
 
   <script>
-    document.getElementById("contactForm").onsubmit = function (e) {
+    const navBtn = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) contactForm.onsubmit = function (e) {
       e.preventDefault();
       const form = e.target;
-      const responseEl = document.getElementById("responseMsg");
+      const responseEl = document.getElementById('responseMsg');
 
       // Build a JS object from the form’s inputs
       const formData = new FormData(form);
