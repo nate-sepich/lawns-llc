@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mowing Services | L.A.W.N.S. LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="main-nav">
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../area-served.html">Area Served</a></li>
+      <li><a href="../property-management.html">Property Management</a></li>
+      <li><a href="mowing.html">Mowing</a></li>
+      <li><a href="aeration.html">Aeration</a></li>
+      <li><a href="hauling-dumping.html">Hauling &amp; Dumping</a></li>
+    </ul>
+  </nav>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="../assets/landingpage/transparent-logo.png" alt="LAWNS LLC Logo" />
+      <h1>Mowing Services</h1>
+      <p>Keep your lawn pristine with regular mowing and trimming</p>
+      <a href="../index.html#contactForm" class="cta-btn">Request Service</a>
+    </div>
+  </header>
+
+  <div class="service-grid">
+    <section class="property-management">
+      <h2>Professional Lawncare</h2>
+      <p>Our team provides meticulous mowing, trimming, and edging to maintain a beautiful, healthy lawn all season long.</p>
+      <img src="../assets/landingpage/background.jpg" alt="Freshly mowed lawn" />
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 L.A.W.N.S. LLC • All rights reserved
+  </footer>
+  <script>
+    const navBtn = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
