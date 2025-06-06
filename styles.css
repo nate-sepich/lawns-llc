@@ -257,3 +257,34 @@ footer {
     display: flex;
   }
 }
+
+.service-tiers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.service-card {
+  flex: 1 1 250px;
+  background: white;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  margin: 0.5rem;
+  color: #2e7d32;
+}
