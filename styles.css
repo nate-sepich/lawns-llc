@@ -242,7 +242,6 @@ footer {
   min-height: 400px;
   border: 0;
 }
-
 @media (max-width: 600px) {
   .nav-toggle {
     display: block;
