@@ -5,6 +5,38 @@ body {
   background-color: #f4f8f4;
   color: #333;
 }
+
+.main-nav {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0.5rem;
+}
+.main-nav .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: bold;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 .hero {
   position: relative;
   background: url('assets/landingpage/background.jpg') center/cover no-repeat;
@@ -55,7 +87,7 @@ body {
   background-color: #1b5e20;
 }
 .hero-content img {
-  max-width: 45%;
+  max-width: 55%;
   height: auto;
 }
 .acronym {
@@ -73,20 +105,6 @@ body {
 .acronym ul {
   padding-left: 1.2rem;
 }
-.additional-services {
-  max-width: 600px;
-  margin: 2rem auto;
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.additional-services h2 {
-  color: #2e7d32;
-}
-.additional-services ul {
-  padding-left: 1.2rem;
-}
 
 .service-grid {
   display: flex;
@@ -96,8 +114,7 @@ body {
   margin: 2rem auto;
   max-width: 900px;
 }
-.service-grid .property-management,
-.service-grid .additional-services {
+.service-grid .property-management {
   flex: 1 1 280px;
   margin: 0;
 }
@@ -209,4 +226,50 @@ footer {
   width: 100%;
   min-height: 400px;
   border: 0;
+}
+@media (max-width: 600px) {
+  .nav-toggle {
+    display: block;
+  }
+  .main-nav .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .main-nav .nav-links.open {
+    display: flex;
+  }
+}
+
+.service-tiers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.service-card {
+  flex: 1 1 250px;
+  background: white;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  margin: 0.5rem;
+  color: #2e7d32;
 }

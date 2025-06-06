@@ -2,12 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Service Area | L.A.W.N.S. LLC</title>
+  <title>Area Served | L.A.W.N.S. LLC</title>
   <meta name="description" content="L.A.W.N.S. LLC serves Des Moines, West Des Moines, Waukee and surrounding Iowa communities with lawncare and property management." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav class="main-nav">
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="area-served.html">Area Served</a></li>
+      <li><a href="property-management.html">Property Management</a></li>
+      <li><a href="services/mowing.html">Mowing</a></li>
+      <li><a href="services/aeration.html">Aeration</a></li>
+    </ul>
+  </nav>
+
   <header class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -25,9 +36,15 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193820.6121700482!2d-93.7970629!3d41.5725479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee99e035a668d1%3A0x89f3e2a206e0b89b!2sDes%20Moines%2C%20IA!5e0!3m2!1sen!2sus!4v1713000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
-
   <footer>
     &copy; 2025 L.A.W.N.S. LLC • All rights reserved
   </footer>
+  <script>
+    const navBtn = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>

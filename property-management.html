@@ -8,6 +8,16 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav class="main-nav">
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="area-served.html">Area Served</a></li>
+      <li><a href="property-management.html">Property Management</a></li>
+      <li><a href="services/mowing.html">Mowing</a></li>
+      <li><a href="services/aeration.html">Aeration</a></li>
+    </ul>
+  </nav>
   <header class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -19,23 +29,33 @@
     </div>
   </header>
 
-  <div class="service-grid">
-    <section class="property-management">
-      <h2>Between Closing Mowing</h2>
-      <p>Keep your vacant property presentable while it awaits new owners. We offer scheduled mowing, trimming, and cleanup so the lawn stays neat throughout the transition.</p>
-      <p>Need more than mowing? We can remove leaves, clear debris, and perform other maintenance for rentals and second homes.</p>
-      <p><a href="area-served.html" class="cta-btn">Area Served</a></p>
-    </section>
-    <section class="additional-services">
-      <h2>Additional Services</h2>
-      <ul>
-        <li>Hauling &amp; Dumping</li>
-      </ul>
-    </section>
-  </div>
+  <section class="service-tiers">
+    <div class="service-card">
+      <img src="assets/landingpage/background.jpg" alt="Mowing and upkeep" />
+      <h3>Between Closing Mowing</h3>
+      <p>Scheduled mowing and trimming for vacant properties.</p>
+    </div>
+    <div class="service-card">
+      <img src="assets/landingpage/sidewalk-cleanup.jpg" alt="Property maintenance" />
+      <h3>Property Upkeep</h3>
+      <p>Leaf cleanup and debris removal for rentals and second homes.</p>
+    </div>
+    <a class="service-card" href="services/hauling-dumping.html">
+      <img src="assets/landingpage/wide-driveway-cleanup.jpg" alt="Hauling and dumping" />
+      <h3>Hauling &amp; Dumping</h3>
+    </a>
+  </section>
+  <p style="text-align:center"><a href="area-served.html" class="cta-btn">Area Served</a></p>
 
   <footer>
     &copy; 2025 L.A.W.N.S. LLC • All rights reserved
   </footer>
+  <script>
+    const navBtn = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
